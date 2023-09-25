@@ -133,6 +133,7 @@ class home extends StatelessWidget {
                   )),
               Container(
                 color: Colors.blue,
+                height: 200,
                 child: Flexible(
                     child: Obx(() => ListView.builder(
                           shrinkWrap: true,
@@ -161,6 +162,7 @@ class home extends StatelessWidget {
               ),
               Container(
                 color: Colors.yellow,
+                height: 200,
                 child: Flexible(
                     child: Obx(() => ListView.builder(
                           shrinkWrap: true,
