@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:september18/home.dart';
 import 'package:september18/page_3.dart';
 import 'package:september18/page_4.dart';
+import 'package:september18/page_5.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/', page: ()=> MyApp()),
         GetPage(name: '/indec', page: ()=> indec()),
         GetPage(name: '/listscr', page: ()=> listscr()),
+        GetPage(name: '/addmapel', page: ()=> mapel()),
       ],
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,

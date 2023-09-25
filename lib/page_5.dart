@@ -1,36 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller/controller.dart';
+import 'package:september18/controller/controller.dart';
 
-class listscr extends StatelessWidget {
-  const listscr({Key? key}) : super(key: key);
+class mapel extends StatelessWidget {
+  const mapel({super.key});
 
   @override
   Widget build(BuildContext context) {
     IniController ic = Get.find();
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Siswa'),
+        title: Text('Add Mapel'),
       ),
       body: Container(
           child: Column(
         children: [
           TextField(
-            controller: ic.namaSiswa,
-            decoration: InputDecoration(labelText: 'Input Nama'),
+            controller: ic.namaMapel,
+            decoration: InputDecoration(labelText: 'Input Kode Mapel'),
+          ),
+          TextField(
+            controller: ic.jnsMapel,
+            decoration: InputDecoration(labelText: 'Input Nama Mapel'),
           ),
           ElevatedButton(
               onPressed: () {
-                ic.tambahKeList(ic.namaSiswa.text);
+                ic.addMapel(ic.namaMapel.text, ic.jnsMapel.text);
               },
               child: Text('Submit')),
           Expanded(
               child: Obx(() => ListView.builder(
                     shrinkWrap: true,
-                    itemCount: ic.SiswaName.length,
+                    itemCount: ic.ListMapel.length,
                     itemBuilder: (context, index) {
+                      String key = ic.ListMapel.keys.elementAt(index);
                       return ListTile(
-                        title: Text('${ic.SiswaName.value[index]}'),
+                        leading: Text('${key}'),
+                        trailing: Text('${ic.ListMapel[key]}'),
                       );
                     },
                   )))
