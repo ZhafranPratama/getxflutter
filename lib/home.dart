@@ -22,10 +22,16 @@ class home extends StatelessWidget {
                     children: [
                       TextButton(
                           onPressed: () {
-                            Get.toNamed('/indec');
+                            Get.toNamed('/chngkelas');
                           },
-                          child: Text('Increase/Decrease',
+                          child: Text('Change Kelas',
                               style: TextStyle(color: Colors.black))),
+                      // TextButton(
+                      //     onPressed: () {
+                      //       Get.toNamed('/indec');
+                      //     },
+                      //     child: Text('Increase/Decrease',
+                      //         style: TextStyle(color: Colors.black))),
                       TextButton(
                           onPressed: () {
                             Get.toNamed('/listscr');
@@ -55,11 +61,13 @@ class home extends StatelessWidget {
                 width: 1000,
                 height: 30,
                 color: Colors.orange,
-                child: Text(
-                  'KELAS',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 20,
+                child: Obx(
+                  () => Text(
+                    ic.kelas.value,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ),

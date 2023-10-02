@@ -4,6 +4,7 @@ import 'package:september18/home.dart';
 import 'package:september18/page_3.dart';
 import 'package:september18/page_4.dart';
 import 'package:september18/page_5.dart';
+import 'package:september18/page_6.dart';
 import 'layout.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/indec', page: ()=> indec()),
         GetPage(name: '/listscr', page: ()=> listscr()),
         GetPage(name: '/addmapel', page: ()=> mapel()),
+        GetPage(name: '/chngkelas', page: ()=> kelas()),
       ],
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,

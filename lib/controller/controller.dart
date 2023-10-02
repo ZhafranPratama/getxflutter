@@ -4,16 +4,21 @@ import 'package:get/get.dart';
 class IniController extends GetxController {
   // RxString nama = RxString('');
   final nama = ''.obs;
+  final kelas = 'KELAS'.obs;
 
   TextEditingController textcontroller = TextEditingController();
   TextEditingController namaSiswa = TextEditingController();
   TextEditingController namaMapel = TextEditingController();
   TextEditingController jnsMapel = TextEditingController();
-
+  TextEditingController namaKelas = TextEditingController();
 
   void ChangeName(String Newnama) {
     nama.value = Newnama;
     // Get.snackbar('Nama yang diinput', nama.value, snackPosition: SnackPosition.TOP);
+  }
+
+  void ChangeKelas(String newKelas){
+    kelas.value = newKelas;
   }
 
   String nama2 = '';
