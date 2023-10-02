@@ -4,6 +4,7 @@ import 'package:september18/home.dart';
 import 'package:september18/page_3.dart';
 import 'package:september18/page_4.dart';
 import 'package:september18/page_5.dart';
+import 'layout.dart';
 
 void main() {
   runApp(const MyApp());
